@@ -1,0 +1,10 @@
+In order to enter USB boot mode, you must prepare an SD card as follows:
+
+Assuming /dev/sdi is your SD card device:
+
+# sudo dd if=rom.bin of=/dev/sdi bs=512 seek=2
+
+Note that you can actually have a fully functional card for storage and use
+it also to enter USB boot mode as long as you partition it such that the
+first partition starts beyond sector 17.
+
